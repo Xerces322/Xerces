@@ -87,11 +87,20 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-        while(true){
-            String expression = scanner.nextLine();
-            if (expression.equals("f"))
+        while (true) {
+            System.out.println("Введите выражение для вычисления (или введите 'f' для завершения программы): ");
+            String input = scanner.nextLine();
+
+            if (input.equalsIgnoreCase("f")) {
+                System.out.println("Программа завершена.");
                 break;
-            System.out.println(calc(expression) + "\nДля завершения программы введите f");
+            }
+
+            try {
+                System.out.println(calc(input));
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 }
