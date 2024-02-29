@@ -91,7 +91,7 @@ public class Main {
             String expression = scanner.nextLine();
             if (expression.equals("f"))
                 break;
-            System.out.println(calc(expression) + "\nДля завершения программы нажмите f");
+            System.out.println(calc(expression) + "\nДля завершения программы введите f");
         }
     }
 }
