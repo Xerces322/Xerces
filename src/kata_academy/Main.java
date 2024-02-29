@@ -1,5 +1,7 @@
 package kata_academy;
 
+import java.util.Scanner;
+
 public class Main {
     static String[] roman = {"I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"};
     static int[] arabic = {1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000};
@@ -84,6 +86,12 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println(calc("1 - 2"));
+        Scanner scanner = new Scanner(System.in);
+        while(true){
+            String expression = scanner.nextLine();
+            if (expression.equals("f"))
+                break;
+            System.out.println(calc(expression) + "\nДля завершения программы нажмите f");
+        }
     }
 }
