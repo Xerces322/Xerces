@@ -91,11 +91,10 @@ public class Main {
             System.out.println("Введите выражение для вычисления (или введите 'f' для завершения программы): ");
             String input = scanner.nextLine();
 
-            if (input.equalsIgnoreCase("f")) {
+            if (input.equals("f")) {
                 System.out.println("Программа завершена.");
                 break;
             }
-
             try {
                 System.out.println(calc(input));
             } catch (Exception e) {
